@@ -1,9 +1,9 @@
-name: Container Build & Push - ColoursWeb
+name: Container Build & Push - ColorsWeb
 on:
   workflow_dispatch:
   
 env:
-  IMAGENAME: coloursweb
+  IMAGENAME: colorsweb
    
 jobs:
   app-build:
