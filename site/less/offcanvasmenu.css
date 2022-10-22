@@ -1,0 +1,111 @@
+﻿/*!
+ * @description Based on The side navigation menu
+ * @author W3School ... amendments by MH 
+ * @link https://www.w3schools.com/howto/howto_js_off-canvas.asp
+ */
+.sidenav {
+    margin-right: 250px;
+    margin-left: -250px;
+    height: 100%; /* 100% Full-height */
+    width: 250px; /* MRH */ /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Stay on top */
+    top: 0;
+    left: 0; /* MRH */
+    background-color: #333; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+    /* The navigation menu links */
+    .sidenav .navtext {
+        padding: 4px 4px 8px 8px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav .naviconlink {
+        cursor: default;
+        color: #818181;
+        text-decoration: none;
+        user-select: none;
+        transition: 0.3s;
+    }
+
+        .sidenav .naviconlink:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+        }
+
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .sidenav .sidetext {
+        padding: 4px 8px 4px 8px;
+        font-size: 12px;
+        color: #818181;
+    }
+
+    /*.sidenav .navmhtitle {
+        padding: 4px 8px 1px 8px;
+        font-size: 20px;
+        color: #fff;
+    }*/
+
+    /*.sidenav .navicons {
+        background-color: lightgrey;
+        border-radius: 50%;
+        border: 1px solid grey;
+        padding: 0px;
+        color: #000;
+        font-size: 20px;
+    }
+
+        .sidenav .navicons:hover {
+            background-color: #fff;
+        }*/
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#idmaincontent {
+    transition: margin-left .5s, margin-right .5s;
+    padding: 0;
+}
+
+#idnavoverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}

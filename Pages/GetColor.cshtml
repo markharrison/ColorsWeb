@@ -1,0 +1,8 @@
+﻿@page
+@model ColorsWeb.Pages.GetColorsModel
+@{
+    Layout = null;
+    Response.ContentType = "application/json";
+    Response.StatusCode = Model.iStatusCode;
+}
+@Html.Raw(Model.strResponse)

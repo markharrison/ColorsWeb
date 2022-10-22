@@ -1,0 +1,30 @@
+﻿@page
+@model ColorsWeb.Pages.IndexModel
+@{
+    ViewData["Title"] = "Colors Home";
+}
+
+<div class="container-fluid">
+
+    <div id="idLights"></div>
+    <br />
+    <div style="word-wrap:break-word">
+        <span id="idAPIUrl"></span>&nbsp;&nbsp;
+        <span id="idErrorText" style="color: red;"></span>&nbsp;&nbsp;
+        <span id="idCallsText"></span>
+    </div>
+    <div style="margin-top: 10px;">
+        <button id="idButStart" onclick="doStart(); return false;">Start</button>
+        <button id="idButReset" style="display:none;" onclick="window.location.href='/'; return false;">Reset</button>
+    </div>
+</div>
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            doDefaultReady();
+        });
+    </script>
+}
+

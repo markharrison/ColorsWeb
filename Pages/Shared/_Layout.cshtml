@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - ColorsWeb</title>
+    <link rel="stylesheet" href="https://www.unpkg.com/fork-awesome@1.2.0/css/fork-awesome.min.css"
+          integrity="sha384-Ux/4YAAMlStTOIqhvtkrLXf3Qlb10beD6Hr9GAFxGGc8zsIulJZBqA1+/naXWvVZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link href="~/css/site.min.css?rel=b8ec918705" rel="stylesheet" />
+</head>
+<body class="preload">
+
+    <div id="idnavbutton" class="hamburger hamburger--arrow" onclick="toggleNav();">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </div>
+
+    <div id="idsitetitle" class="mh-sitetitle">
+        <h1>&nbsp;Colors&nbsp;&nbsp;</h1>
+    </div>
+
+    <div id="idnavsidebar" class="sidenav">
+        <br />
+        <div class="navtext">
+            <span class='naviconlink' onclick='window.open("/", "_self"); return false;'><i class='fa fa-home fa-lg fa-fw'></i>Home</span><br />
+        </div>
+        <div class="navtext">
+            <span class='naviconlink' onclick='window.open("/config", "_self"); return false;'><i class='fa fa-edit fa-lg fa-fw'></i>Config</span><br />
+        </div>
+        <div class="navtext">
+            <span class='naviconlink' onclick='window.open("https://github.com/markharrison/colorsweb", "_blank"); return false;'><i class='fa fa-github fa-lg fa-fw'></i>ColorsWeb</span><br />
+        </div>
+        <div class="navtext">
+            <span class='naviconlink' onclick='window.open("https://azure1.dev", "_blank"); return false;'><i class='fa fa-cloud fa-lg fa-fw'></i>Azure&nbsp;1</span><br />
+        </div>
+        <div class="navtext">
+            <span class='naviconlink' onclick='window.open("https://markharrison.io", "_blank"); return false;'><i class='fa fa-book fa-lg fa-fw'></i>Mark&nbsp;Harrison</span><br />
+        </div>
+
+        <br />
+        <div class="sidetext">Provided "as is" with no warranties, and confer no rights.</div>
+        <br />
+    </div>
+
+    <div id="idnavoverlay" onclick="toggleNav();"></div>
+
+    <div id="idmaincontent">
+        <div class="container-fluid ">
+            <br /><br /><br /><br />
+            @RenderBody()
+            <hr style="border-top: 2px solid black" />
+            <footer>
+                <p style="float:right"><i class='fa fa-github fa-lg fa-fw'></i>&nbsp;<a href="https://github.com/markharrison/colorsweb" target="_blank">Mark&nbsp;Harrison</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"
+            integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <script src="~/js/site.min.js?rel=dd6f314afc"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("body").removeClass("preload");
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
