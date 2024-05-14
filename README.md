@@ -6,6 +6,8 @@ https://markharrison.io/
 
 11 April 2022 : Updated to .NET 6.0
 
+14 May 2024 : Updated to .NET 8.0
+
 Demo: <https://colors-web.azurewebsites.net>
 
 Also see: <https://github.com/markharrison/ColorsAPI>

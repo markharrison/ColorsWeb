@@ -1,9 +1,10 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ColorsWeb.csproj", "."]
 RUN dotnet restore "./ColorsWeb.csproj"
@@ -12,6 +13,7 @@ WORKDIR "/src/."
 RUN dotnet build "ColorsWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "ColorsWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
