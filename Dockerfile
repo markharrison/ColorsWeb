@@ -11,11 +11,11 @@ COPY ["ColorsWeb.csproj", "."]
 RUN dotnet restore "./ColorsWeb.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "ColorsWeb.csproj" -c Release -o /app/build
+RUN dotnet build "./ColorsWeb.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "ColorsWeb.csproj" -c Release -o /app/publish
+RUN dotnet publish "./ColorsWeb.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
