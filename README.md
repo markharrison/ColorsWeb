@@ -12,6 +12,14 @@ Demo: <https://colors-web.azurewebsites.net>
 
 Also see: <https://github.com/markharrison/ColorsAPI>
 
+## Configuration
+
+Environment variables / configuration 
+
+| Key          | Value     |  
+|--------------|-----------| 
+| ASPNETCORE_HTTP_PORTS | 8080  |  
+
 ## Package 
 
 <https://github.com/markharrison/ColorsWeb/pkgs/container/colorsweb>
