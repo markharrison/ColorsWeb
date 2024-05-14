@@ -18,10 +18,8 @@ namespace ColorsWeb
                     {
                         options.Conventions.ConfigureFilter(new Microsoft.AspNetCore.Mvc.IgnoreAntiforgeryTokenAttribute());
                     });
-            //builder.Services.AddMemoryCache();
+
             builder.Services.AddSingleton<AppConfig>(new AppConfig(builder.Configuration));
-            //builder.Services.AddResponseCaching();
-            //builder.Services.AddApplicationInsightsTelemetry();
 
             var app = builder.Build();
 
@@ -42,21 +40,6 @@ namespace ColorsWeb
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    //OnPrepareResponse = (context) =>
-            //    //{
-            //    //    var headers = context.Context.Response.GetTypedHeaders();
-            //    //    headers.CacheControl = new Microsoft.Net.Http.Headers.CacheControlHeaderValue
-            //    //    {
-            //    //        Public = true,
-            //    //        MaxAge = TimeSpan.FromDays(1)
-            //    //    };
-            //    //}
-            //});
-
-            // app.UseResponseCaching();
 
             app.UseRouting();
 
