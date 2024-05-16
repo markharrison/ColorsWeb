@@ -2,7 +2,7 @@
 
 https://markharrison.io/ 
 
-![](docs/imgColorsWeb1.png)
+![](docs/imgColorsWeb.png)
 
 11 April 2022 : Updated to .NET 6.0
 
