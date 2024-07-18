@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
       with:
-        node-version: 16    
+        node-version: 20  
 
     - name: Install npm packages 
       run: |
@@ -66,7 +66,7 @@ jobs:
         password: ${{ secrets.GHCR_TOKEN }}
 
     - name: Build and push Docker images
-      uses: docker/build-push-action@v2.2.1
+      uses: docker/build-push-action@v5
       with:
         context: .
         file: ./Dockerfile
