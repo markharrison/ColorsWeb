@@ -8,6 +8,8 @@ https://markharrison.io/
 
 14 May 2024 : Updated to .NET 8.0
 
+2 May 2025 : Updated to .NET 9.0, added hexcode 
+
 Demo: <https://colors-web.azurewebsites.net>
 
 Also see: <https://github.com/markharrison/ColorsAPI>

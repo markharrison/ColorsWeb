@@ -28,8 +28,14 @@ function ColorTrigger(x) {
             var vRate = (1000 * iCalls / vInterval).toFixed(2)
             $('#idCallsText').html("Calls:&nbsp;" + iCalls + "&nbsp;&nbsp;Rate: " + vRate + " ps");
 
-            var colorName = data.name;
-            $('#idLight' + x.toString()).css({ fill: colorName });
+            var colorValue;
+            if (data.hexcode.startsWith("#")) {
+                colorValue = data.hexcode
+            } else {
+                colorValue = data.name;
+            }
+
+            $('#idLight' + x.toString()).css({ fill: colorValue });
 
             var iDelay = Math.ceil(Math.random() * iMaxPollTimer);
             setTimeout(function (xx) { ColorTrigger(xx); }, iDelay, x);
